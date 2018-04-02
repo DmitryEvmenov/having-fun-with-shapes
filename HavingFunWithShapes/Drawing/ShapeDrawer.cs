@@ -8,8 +8,6 @@ namespace HavingFunWithShapes.Drawing
     {
         public void DrawShapeInto(Shape shape, TextWriter writer)
         {
-            writer.WriteLine("//////////////");
-
             writer.WriteLine($"Drawing {shape.Name}");
             shape.Points.ForEach(p => DrawPointInto(p, writer));
 
@@ -18,7 +16,7 @@ namespace HavingFunWithShapes.Drawing
                 DrawCustomInto(drawable, writer);
             }
 
-            writer.WriteLine("//////////////");
+            writer.WriteLine("___________________________________________");
         }
 
         public void DrawShapesInto(ShapeList shapes, TextWriter writer) => shapes.ForEach(s => DrawShapeInto(s, writer));
