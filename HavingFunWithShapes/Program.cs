@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using HavingFunWithShapes.Drawing;
 using Shapes.Abstract;
 using Shapes.Concrete;
@@ -14,6 +15,13 @@ namespace HavingFunWithShapes
             var drawer = new ShapeDrawer();
             drawer.DrawShapesInto(shapeList, Console.Out);
 
+            var customShape = InitCustomShape();
+            if (customShape != null)
+            {
+                shapeList.Add(customShape);
+                drawer.DrawShapesInto(shapeList, Console.Out);
+            }
+
             Console.ReadLine();
         }
 
@@ -27,5 +35,35 @@ namespace HavingFunWithShapes
                 new Rectangle(0, 0, 10, 25),
                 new Square(0, 0, 5)
             };
+
+        private static Shape InitCustomShape()
+        {
+            Console.WriteLine("Would you like to enter a custom shape? (y/n)");
+            var answer = Console.ReadLine();
+            if (answer == "y")
+            {
+                Console.WriteLine("Please enter the shape name:");
+                var shapeName = Console.ReadLine();
+                Console.WriteLine("Please enter the shape points count:");
+                var shapePointsCount = int.Parse(Console.ReadLine());
+
+                var points = new List<Point>();
+                for (int i = 1; i <= shapePointsCount; i++)
+                {
+                    var point = new Point();
+
+                    Console.WriteLine($"Please enter Point{i} X:");
+                    point.X = int.Parse(Console.ReadLine());
+                    Console.WriteLine($"Please enter Point{i} Y:");
+                    point.Y = int.Parse(Console.ReadLine());
+
+                    points.Add(point);
+                }
+
+                return CustomShapeTypeBuilder.CreateNewShape(shapeName, points);
+            }
+
+            return null;
+        }
     }
 }

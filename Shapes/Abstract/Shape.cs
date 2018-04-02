@@ -7,7 +7,7 @@ namespace Shapes.Abstract
     {
         public List<Point> Points { get; }
 
-        protected Shape(List<Point> points)
+        public Shape(List<Point> points)
         {
             Points = points;
         }
