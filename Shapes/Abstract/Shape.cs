@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
+using Shapes.General;
 
-namespace Shapes
+namespace Shapes.Abstract
 {
     public abstract class Shape
     {

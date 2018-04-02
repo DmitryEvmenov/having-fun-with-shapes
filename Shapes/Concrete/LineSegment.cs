@@ -1,4 +1,6 @@
-﻿namespace Shapes
+﻿using Shapes.General;
+
+namespace Shapes.Concrete
 {
     public class LineSegment : Line
     {

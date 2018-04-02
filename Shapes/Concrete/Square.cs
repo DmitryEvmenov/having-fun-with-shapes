@@ -1,4 +1,4 @@
-﻿namespace Shapes
+﻿namespace Shapes.Concrete
 {
     public class Square : Rectangle
     {

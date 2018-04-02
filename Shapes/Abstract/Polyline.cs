@@ -1,6 +1,7 @@
 ﻿using System.Linq;
+using Shapes.General;
 
-namespace Shapes
+namespace Shapes.Abstract
 {
     public abstract class Polyline : Shape
     {

@@ -1,4 +1,7 @@
-﻿namespace Shapes
+﻿using Shapes.Abstract;
+using Shapes.General;
+
+namespace Shapes.Concrete
 {
     public class Polygon : Polyline
     {
