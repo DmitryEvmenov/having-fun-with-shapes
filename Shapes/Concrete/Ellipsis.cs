@@ -10,7 +10,7 @@ namespace Shapes.Concrete
         public Ellipsis(int centerX, int centerY, int radius, double stretchingX, double stretchingY) : base(centerX, centerY, radius)
         {
             StretchingX = stretchingX;
-            StretchingY = StretchingY;
+            StretchingY = stretchingY;
         }
 
         public override IDictionary<string, object> CustomDrawObjects

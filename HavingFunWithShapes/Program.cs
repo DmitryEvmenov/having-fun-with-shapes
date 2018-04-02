@@ -1,4 +1,5 @@
 ﻿using System;
+using HavingFunWithShapes.Drawing;
 
 namespace HavingFunWithShapes
 {
@@ -6,7 +7,10 @@ namespace HavingFunWithShapes
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var drawer = new ShapeDrawer();
+            //drawer.DrawInto(Console.Out);
+
+            Console.ReadLine();
         }
     }
 }

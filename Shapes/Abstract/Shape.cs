@@ -11,5 +11,7 @@ namespace Shapes.Abstract
         {
             Points = points;
         }
+
+        public string Name => GetType().Name;
     }
 }
