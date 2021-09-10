@@ -12,8 +12,6 @@ resource "null_resource" "staff_storage_set_up_users" {
      -SqlScriptName "ConfigureSqlDatabasePermissions.sql" `
      -subscriptionId foo
     EOT
-    # interpreter = ["PowerShell", "-NoProfile", "-NonInteractive", "-Command"]
-    # environment = { "$PATH" = "%PATH%;C:\\Windows\\System32" }
     on_failure  = fail
   }
 }
