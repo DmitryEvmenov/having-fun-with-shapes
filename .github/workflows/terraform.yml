@@ -56,10 +56,10 @@ jobs:
     runs-on: ubuntu-latest
     environment: production
 
-    # Use the Bash shell regardless whether the GitHub Actions runner is ubuntu-latest, macos-latest, or windows-latest
+    # Use the pwsh shell regardless whether the GitHub Actions runner is ubuntu-latest, macos-latest, or windows-latest
     defaults:
       run:
-        shell: bash
+        shell: pwsh
 
     steps:
     # Checkout the repository to the GitHub Actions runner
